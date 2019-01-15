@@ -144,6 +144,7 @@ def test_add_two_dicts_with_unique_keys():
         'd': 4
     }
 
+
 def test_from_keys_with_sequences():
     d = OrderedDict.from_keys('abc')
     assert d == {
@@ -165,7 +166,8 @@ def test_from_keys_with_sequences():
         'def': None
     }
 
-@pytest.mark.skip(reason="Homework for students")
+
+# @pytest.mark.skip(reason="Homework for students")
 def test_add_two_dicts_with_repeated_keys():
     d1 = OrderedDict()
     d1['a'] = 1
@@ -184,7 +186,7 @@ def test_add_two_dicts_with_repeated_keys():
     }
 
 
-@pytest.mark.skip(reason="Homework for students")
+# @pytest.mark.skip(reason="Homework for students")
 def test_set_repeated_items():
     d = OrderedDict()
     assert d.keys() == []
@@ -192,7 +194,7 @@ def test_set_repeated_items():
 
     d['language'] = 'Python'
     assert d.keys() == ['language']
-    assert d.values() == [1]
+    assert d.values() == ['Python']
 
     d['other'] = ('a', 'b', 'c')
     assert d.keys() == ['language', 'other']
@@ -204,7 +206,7 @@ def test_set_repeated_items():
     assert d.values() == ['Ruby', ('a', 'b', 'c')]
 
 
-@pytest.mark.skip(reason="Homework for students")
+# @pytest.mark.skip(reason="Homework for students")
 def test_dictionaries_are_not_equal_order():
     d1 = OrderedDict()
     d1['a'] = 1
@@ -214,4 +216,4 @@ def test_dictionaries_are_not_equal_order():
     d2['b'] = 2
     d2['a'] = 1
 
-    assert d1 != d2
+    assert d1 != d2  # this is using the __str__ method.. They are diff order
